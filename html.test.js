@@ -19,7 +19,7 @@ describe("HTML Testing", () => {
   });
 
   test("HTML should have a welcome message", () => {
-    expect(htmlContent).toContain("<h1>Welcome to My Site</h1>");
+    expect(htmlContent).toContain("<h1>Welcome to My Website</h1>");
   });
   
 
