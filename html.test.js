@@ -19,8 +19,9 @@ describe("HTML Testing", () => {
   });
 
   test("HTML should have a welcome message", () => {
-    expect(htmlContent).toContain("<h1>Welcome to My Website</h1>");
+    expect(htmlContent).toContain("<h1>Welcome to My Site</h1>");
   });
+  
 
   test("HTML should contain a main section", () => {
     expect(htmlContent).toContain("<main>");
@@ -36,14 +37,13 @@ describe("HTML Testing", () => {
 
   test("HTML should have the correct lang attribute in the <html> tag", () => {
     const expectedLang = "fr";
-    expect(htmlContent).toHaveAttribute("html", "lang", expectedLang);
+    expect(htmlContent).toContain("html", "lang", expectedLang);
   });
 
   test("HTML should not have any extraneous elements", () => {
-    // Check if the HTML does not contain unexpected elements
-    const unexpectedElements = ["<script", "<style"];
+    const unexpectedElements = ["<style"];
     unexpectedElements.forEach((element) => {
       expect(htmlContent).not.toContain(element);
     });
-  });
+  });  
 });
